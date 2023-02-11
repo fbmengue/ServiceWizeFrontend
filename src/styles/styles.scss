@@ -1,4 +1,6 @@
 
+
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -36,4 +38,28 @@ $ServiceWizeFrontend-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  
+
+  
+}
+
+.page-container {
+  max-width: 1080px;
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20px
+}
+
+.sidenav-menu {
+  width: 350px;
+}
+
+.sidenav-menu div.sidenav-menu-item {
+  display: flex !important;
+  justify-content: left;
+}

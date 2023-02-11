@@ -1,5 +1,6 @@
 import { Time } from "@angular/common";
 import { Professional } from "./professional.model";
+import { Amount } from "./ValueObjects/amount.vo";
 
 export class Service {
 
@@ -8,8 +9,8 @@ export class Service {
     public name: string,
     public duration: Time,
     public professionals: Professional[],
-    public price: number,
+    public price: Amount,
     public note: string
-  ) { }
+  ) {}
 
 }
