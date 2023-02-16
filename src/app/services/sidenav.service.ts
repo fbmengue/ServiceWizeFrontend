@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, TemplateRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Subject } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 )
 export class SideNavService {
   public sideNavToggleSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  
+  selectedForm: number = 1;
 
   constructor() { }
 
@@ -18,4 +18,11 @@ export class SideNavService {
   public toggle() {
     return this.sideNavToggleSubject.next(null);
   }
+
+  selectForm(formNumber: number) {
+    this.selectedForm = formNumber;
+  }
+
+  
+  
 }

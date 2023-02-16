@@ -1,0 +1,169 @@
+.explore-button {
+  position: fixed;
+  width: 120px;
+  right: 5px;
+  bottom: 8px;
+}
+
+.action-button {
+  position: fixed;
+  right: 2rem;
+  transition-property: opacity;
+}
+
+@keyframes moveOne {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 5rem;
+  }
+}
+
+@keyframes moveOneLabel {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 5.5rem;
+  }
+}
+
+@keyframes moveTwo {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 8.5rem;
+  }
+}
+
+@keyframes moveTwoLabel {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 9rem;
+  }
+}
+
+@keyframes moveThree {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 12rem;
+  }
+}
+
+@keyframes moveThreeLabel {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 12.5rem;
+  }
+}
+
+
+
+.label {
+  position: fixed;
+  right: 5rem;
+  left: auto;
+  height: 25px;
+  width: 100px;
+  line-height: 25px;
+  min-height: 25px;
+  vertical-align: top;
+  font-size: 12px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.one {
+  bottom: 6rem;
+  animation: moveOne 0.2s;
+}
+
+.labelone {
+  bottom: 6.5rem;
+  animation: moveOneLabel 0.2s;
+}
+
+.two {
+  bottom: 9.5rem;
+  animation: moveTwo 0.25s;
+}
+
+.labeltwo {
+  bottom: 10rem;
+  animation: moveTwoLabel 0.25s;
+}
+
+
+
+// X-Large devices (large desktops, 1080px and up)
+@media (min-width: 1080px) {
+  .explore-button {
+    position: fixed;
+    width: 120px;
+    inset: 10px 0px 10px 931px;
+    margin: auto auto 0 auto;
+  }
+  .action-button {
+    position: fixed;
+    inset: 10px 0px 10px 988px;
+    margin: auto auto 0 auto;
+    transition-property: opacity;
+  }
+
+
+  .label {
+    position: fixed;
+    inset: 10px 0px 10px 827px;
+    margin: auto auto 0 auto;
+  }
+
+  .one {
+    bottom: 5rem;
+    animation: moveOne 0.2s;
+  }
+
+  .labelone {
+    bottom: 5.5rem;
+    animation: moveOneLabel 0.2s;
+  }
+
+  .two {
+    bottom: 8.5rem;
+    animation: moveTwo 0.25s;
+  }
+
+  .labeltwo {
+    bottom: 9rem;
+    animation: moveTwoLabel 0.25s;
+  }
+
+  .three {
+    bottom: 12rem;
+    animation: moveThree 0.25s;
+  }
+
+  .labelthree {
+    bottom: 12.5rem;
+    animation: moveThreeLabel 0.25s;
+  }
+}

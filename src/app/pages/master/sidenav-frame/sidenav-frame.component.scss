@@ -4,14 +4,9 @@
 }
 
 
-.explore-button {
-  position: fixed;
-  width: 120px;
-  right: 5px;
-  bottom: 8px;
-}
 
-.fab-tip {
+
+/*.fab-tip {
   position: fixed;
   right: 85px;
   padding: 0px 0.5rem;
@@ -28,160 +23,27 @@
   right: 1.5rem;
 }
 
-@keyframes moveOne {
-  from {
-    bottom: 2rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 6rem;
-  }
-}
-
-@keyframes moveOneLabel {
-  from {
-    bottom: 2rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 6.5rem;
-  }
-}
-
-@keyframes moveTwo {
-  from {
-    bottom: 2rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 9.5rem;
-  }
-}
-
-@keyframes moveTwoLabel {
-  from {
-    bottom: 2rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 10rem;
-  }
-}
-
-.action-button {
-  position: fixed;
-  right: 2rem;
-  transition-property: opacity;
-}
-
-.label {
-  position: fixed;
-  right: 5rem;
-  left: auto;
-  height: 25px;
-  width: 100px;
-  line-height: 25px;
-  min-height: 25px;
-  vertical-align: top;
-  font-size: 12px;
-  padding: 0 0;
-  margin: 0;
-}
-
-.one {
-  bottom: 6rem;
-  animation: moveOne 0.2s;
-}
-
-.labelone {
-  bottom: 6.5rem;
-  animation: moveOneLabel 0.2s;
-}
-
-.two {
-  bottom: 9.5rem;
-  animation: moveTwo 0.25s;
-}
-
-.labeltwo {
-  bottom: 10rem;
-  animation: moveTwoLabel 0.25s;
-}
-
-.dialog_scrim {
-  background: black;
-  opacity: 0.4;
-  position: fixed;
-  top: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
 
 
 
-// X-Large devices (large desktops, 1080px and up)
-@media (min-width: 1080px) {
-  .explore-button {
-    position: fixed;
-    width: 120px;
-    inset: 10px 0px 10px 931px;
-    margin: auto auto 0 auto;
-  }
 
-    .action-button {
-    position: fixed;
-    inset: 10px 0px 10px 988px;
-    margin: auto auto 0 auto;
-    transition-property: opacity;
-  }
+    
 
-  .label {
-    position: fixed;
-    inset: 10px 0px 10px 827px;
-    margin: auto auto 0 auto;
-  }
+    .dialog_scrim {
+      background: black;
+      opacity: 0.4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+    }
 
-  .one {
-    bottom: 5rem;
-    animation: moveOne 0.2s;
-  }
 
-  .labelone {
-    bottom: 5.5rem;
-    animation: moveOneLabel 0.2s;
-  }
-
-  .two {
-    bottom: 8.5rem;
-    animation: moveTwo 0.25s;
-  }
-
-  .labeltwo {
-    bottom: 9rem;
-    animation: moveTwoLabel 0.25s;
-  }
-
-  .three {
-    bottom: 12rem;
-    animation: moveTwo 0.25s;
-  }
-
-  .labelthree {
-    bottom: 12.5rem;
-    animation: moveTwoLabel 0.25s;
-  }
-
- 
-}
-
+*/
 
 
 

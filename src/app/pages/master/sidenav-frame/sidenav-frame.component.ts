@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, ComponentFactoryResolver, Injector, OnInit,Type,ViewChild, ViewContainerRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { SideNavService } from '../../../services/sidenav.service';
 
@@ -9,29 +9,31 @@ import { SideNavService } from '../../../services/sidenav.service';
 })
 export class SideNavPageComponent implements OnInit {
   @ViewChild('sidenav', { static: true }) public sidenav!: MatSidenav;
+  
 
-  public openMenu: boolean = false;
-  isOver = false;
 
-  clickMenu() {
-    this.openMenu = !this.openMenu;
-  }
-
-  hello(mex: string) {
-    alert('Hello ' + mex + '!');
-  }
-
-  constructor(private sideNavService: SideNavService) {}
+  constructor(private sideNavService: SideNavService)  {}
 
   ngOnInit() {
 
     this.sideNavService.sideNavToggleSubject.subscribe(() => {
-      console.log(this.sidenav.toggle);
-
       this.sidenav.toggle();
       
     });
-  } 
+
+
+  }
+
+
+  public selectServiceForm() {
+    this.sideNavService.toggle();
+    this.sideNavService.selectForm(1);
+  }
+
+  public selectClientForm() {
+    this.sideNavService.toggle();
+    this.sideNavService.selectForm(2);
+  }
 
 
   

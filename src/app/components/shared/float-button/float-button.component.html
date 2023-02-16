@@ -1,0 +1,63 @@
+<div>
+
+
+  <!-- menu fab Explore -->
+  <button mat-fab extended color="primary" (click)="clickFloatMenu()"
+          class="explore-button"
+          [class.mat-elevation-z2]="!isOver"
+          [class.mat-elevation-z8]="isOver"
+          (mouseover)="isOver = true"
+          (mouseleave)="isOver = false">
+    <i class="material-icons" *ngIf="!openMenu">explore</i>
+    <i class="material-icons" *ngIf="openMenu">close</i>
+    Explore
+  </button>
+
+  <!-- menu button -->
+  <button mat-mini-fab
+          class="action-button one mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu();">
+    <i class="material-icons">event</i>
+  </button>
+
+  <button mat-raised-button
+          class="label labelone mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu()">
+    Add Appointment
+  </button>
+
+  <button mat-mini-fab
+          class="action-button two mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu()">
+    <i class="material-icons">face</i>
+  </button>
+  <button mat-raised-button
+          class="label labeltwo mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu()">
+    Add Client
+  </button>
+
+  <button mat-mini-fab
+          class="action-button three mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu2()">
+    <i class="material-icons">done_all</i>
+  </button>
+  <button mat-raised-button id="add-service-label"
+          class="label labelthree mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="ClickSidenavMenu2()">
+    Add Service
+  </button>
+
+</div>

@@ -12,7 +12,7 @@ import { CalendarCardComponent } from './components/calendar/calendar-card/calen
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { ErrorStateMatcher, MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import {  MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -29,6 +29,11 @@ import { MatListModule } from '@angular/material/list';
 import { SideNavService } from './services/sidenav.service';
 import { ProfilePageComponent } from './pages/account/profile-page/profile-page.component';
 import { SideNavPageComponent } from './pages/master/sidenav-frame/sidenav-frame.component';
+import { FloatButtonComponent } from './components/shared/float-button/float-button.component';
+import { ClientFormComponent } from './components/forms/client-form/client-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomErrorStateMatcher } from './validators/custom-state-matcher.validators';
+import { ServiceFormComponent } from './components/forms/service-form/service-form.component';
 
 
 
@@ -41,7 +46,10 @@ import { SideNavPageComponent } from './pages/master/sidenav-frame/sidenav-frame
     HomePageComponent,
     MaskDirective,
     SideNavPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    FloatButtonComponent,
+    ClientFormComponent,
+    ServiceFormComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +69,8 @@ import { SideNavPageComponent } from './pages/master/sidenav-frame/sidenav-frame
     MatOptionModule,
     MatSelectModule,
     MatListModule,
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   providers: [SideNavService, MatDatepickerModule, MatNativeDateModule],

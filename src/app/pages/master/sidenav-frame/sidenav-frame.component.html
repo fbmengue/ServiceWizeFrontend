@@ -4,95 +4,27 @@
 <mat-sidenav-container class='sidenav-container' fullscreen>
   
   <mat-sidenav #sidenav mode="over" [opened]="false" class="sidenav-menu">
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="['/']">
-        <div class="sidenav-menu-item">
-          <mat-icon>home</mat-icon>
-          <span class="nav-caption">Home</span>
-        </div>
-      </a>
-      <a mat-list-item [routerLink]="['/profile']">
-        <div class="sidenav-menu-item">
-          <mat-icon>info</mat-icon>
-          <span class="nav-caption">Profile</span>
-        </div>
-      </a>
-      <a mat-list-item>
-        <div class="sidenav-menu-item">
-          <mat-icon>contact_mail</mat-icon>
-          <span class="nav-caption">Contact</span>
-        </div>
-      </a> 
-    </mat-nav-list>
+
+    <ng-container [ngSwitch]="true">
+      <ng-container *ngSwitchCase="1">
+        <app-service-form></app-service-form>
+      </ng-container>
+      <ng-container *ngSwitchCase="2">
+        <app-client-form></app-client-form>
+      </ng-container>
+      <ng-container *ngSwitchDefault>Code Default</ng-container>
+    </ng-container>
+    <!--<app-client-form *ngIf="formTemplate === 'clientForm'"></app-client-form>
+  <app-service-form *ngIf="formTemplate === 'serviceForm'"></app-service-form>-->
+
+
   </mat-sidenav>
 
   <mat-sidenav-content>
     <app-navbar></app-navbar>
     <div class="page-container">
       <router-outlet></router-outlet>
-      <div>
-
-
-        <!-- menu fab Explore -->
-        <button mat-fab extended color="primary" (click)="clickMenu()"
-                class="explore-button"
-                [class.mat-elevation-z2]="!isOver"
-                [class.mat-elevation-z8]="isOver"
-                (mouseover)="isOver = true"
-                (mouseleave)="isOver = false">
-          <i class="material-icons" *ngIf="!openMenu">explore</i>
-          <i class="material-icons" *ngIf="openMenu">close</i>
-          Explore
-        </button>
-
-        <!-- menu button -->
-        <button mat-mini-fab
-                class="action-button one mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello( 'button one')">
-          <i class="material-icons">face</i>
-        </button>
-
-        <button mat-raised-button
-                class="label labelone mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello('button one')">
-          Say Hello One
-        </button>
-
-        <button mat-mini-fab
-                class="action-button two mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello('button two')">
-          <i class="material-icons">done_all</i>
-        </button>
-        <button mat-raised-button
-                class="label labeltwo mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello('button two')">
-          Say Hello Two
-        </button>
-
-        <button mat-mini-fab
-                class="action-button three mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello('button two')">
-          <i class="material-icons">done_all</i>
-        </button>
-        <button mat-raised-button
-                class="label labelthree mat-elevation-z8"
-                *ngIf="openMenu"
-                color="basic"
-                (click)="hello('button two')">
-          Say Hello Two
-        </button>
-
-      </div>
+      <app-float-button></app-float-button>
     </div>
   </mat-sidenav-content>
 
