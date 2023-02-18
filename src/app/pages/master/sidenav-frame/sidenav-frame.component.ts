@@ -1,5 +1,6 @@
-import { Component, ComponentFactoryResolver, Injector, OnInit,Type,ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactoryResolver, Injector, Input, OnInit,Type,ViewChild, ViewContainerRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { FormService } from '../../../services/form.service';
 import { SideNavService } from '../../../services/sidenav.service';
 
 @Component({
@@ -9,30 +10,22 @@ import { SideNavService } from '../../../services/sidenav.service';
 })
 export class SideNavPageComponent implements OnInit {
   @ViewChild('sidenav', { static: true }) public sidenav!: MatSidenav;
-  
+  formSelected!: string;
 
 
-  constructor(private sideNavService: SideNavService)  {}
+  constructor(private sideNavService: SideNavService, private formService: FormService
+    ) { }
 
   ngOnInit() {
-
     this.sideNavService.sideNavToggleSubject.subscribe(() => {
       this.sidenav.toggle();
-      
+      this.openForm();
     });
-
-
   }
 
 
-  public selectServiceForm() {
-    this.sideNavService.toggle();
-    this.sideNavService.selectForm(1);
-  }
-
-  public selectClientForm() {
-    this.sideNavService.toggle();
-    this.sideNavService.selectForm(2);
+  openForm() {
+    this.formSelected = this.formService.form
   }
 
 

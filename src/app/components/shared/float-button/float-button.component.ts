@@ -1,4 +1,5 @@
 import { Component, ComponentFactoryResolver, ComponentRef, EventEmitter, Input, OnInit, Output, TemplateRef, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { FormService } from '../../../services/form.service';
 import { SideNavService } from '../../../services/sidenav.service';
 import { ClientFormComponent } from '../../forms/client-form/client-form.component';
 import { ServiceFormComponent } from '../../forms/service-form/service-form.component';
@@ -11,32 +12,32 @@ import { ServiceFormComponent } from '../../forms/service-form/service-form.comp
 export class FloatButtonComponent {
   public openMenu: boolean = false;
   isOver = false;
-  public form: number = 0;
-  
-  constructor(private sideNavService: SideNavService) {
+  //@Input() formOption: string = 'none';
+
+  constructor(private sideNavService: SideNavService, private formService: FormService) {
 
   }
   
 
-  ClickSidenavMenu2() {
+  sidenavOpenForm(form: string) {
+    this.formService.toggleForm(form);
     this.sideNavService.toggle();
-
-  }
-
- 
-  ClickSidenavMenu() {
-    this.sideNavService.toggle();
+    
   }
 
   clickFloatMenu() {
     this.openMenu = !this.openMenu;
   }
+ 
+  //ClickSidenavMenu() {
+  //  this.sideNavService.toggle();
+  //}
+
+ 
 
 
   
 
 
-  hello(mex: string) {
-    alert('Hello ' + mex + '!');
-  }
+  
 }

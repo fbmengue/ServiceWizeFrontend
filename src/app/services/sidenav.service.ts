@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 )
 export class SideNavService {
   public sideNavToggleSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  selectedForm: number = 1;
+  
 
   constructor() { }
 
@@ -19,9 +19,7 @@ export class SideNavService {
     return this.sideNavToggleSubject.next(null);
   }
 
-  selectForm(formNumber: number) {
-    this.selectedForm = formNumber;
-  }
+ 
 
   
   

@@ -32,8 +32,9 @@ import { SideNavPageComponent } from './pages/master/sidenav-frame/sidenav-frame
 import { FloatButtonComponent } from './components/shared/float-button/float-button.component';
 import { ClientFormComponent } from './components/forms/client-form/client-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CustomErrorStateMatcher } from './validators/custom-state-matcher.validators';
 import { ServiceFormComponent } from './components/forms/service-form/service-form.component';
+import { FormService } from './services/form.service';
+import { AppointmentFormComponent } from './components/forms/appointment-form/appointment-form.component';
 
 
 
@@ -49,7 +50,8 @@ import { ServiceFormComponent } from './components/forms/service-form/service-fo
     ProfilePageComponent,
     FloatButtonComponent,
     ClientFormComponent,
-    ServiceFormComponent
+    ServiceFormComponent,
+    AppointmentFormComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,7 @@ import { ServiceFormComponent } from './components/forms/service-form/service-fo
     FormsModule
     
   ],
-  providers: [SideNavService, MatDatepickerModule, MatNativeDateModule],
+  providers: [SideNavService, FormService, MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

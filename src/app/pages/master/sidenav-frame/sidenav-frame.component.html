@@ -5,12 +5,15 @@
   
   <mat-sidenav #sidenav mode="over" [opened]="false" class="sidenav-menu">
 
-    <ng-container [ngSwitch]="true">
-      <ng-container *ngSwitchCase="1">
+    <ng-container [ngSwitch]="formSelected">
+      <ng-container *ngSwitchCase="'service'">
         <app-service-form></app-service-form>
       </ng-container>
-      <ng-container *ngSwitchCase="2">
+      <ng-container *ngSwitchCase="'client'">
         <app-client-form></app-client-form>
+      </ng-container>
+      <ng-container *ngSwitchCase="'appointment'">
+        <app-appointment-form></app-appointment-form>
       </ng-container>
       <ng-container *ngSwitchDefault>Code Default</ng-container>
     </ng-container>
@@ -24,7 +27,7 @@
     <app-navbar></app-navbar>
     <div class="page-container">
       <router-outlet></router-outlet>
-      <app-float-button></app-float-button>
+      <app-float-button ></app-float-button>
     </div>
   </mat-sidenav-content>
 
