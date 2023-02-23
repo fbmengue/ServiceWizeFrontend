@@ -1,1 +1,18 @@
-<p>appointment-form works!</p>
+<div class="form-container">
+  <div class="form-header">
+    <h5>Add New Appointment</h5>
+    <button mat-icon-button class="form-close-x">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+   
+  <ng-container [formGroup]="appointmentForm" class="row">
+    <app-client-form-section formGroupName="clientForm" [item]="errorNameMessage"></app-client-form-section>
+    <app-professional-form-section formGroupName="professionalForm"></app-professional-form-section>
+    <app-datetime-form-section formGroupName="datetimeForm"></app-datetime-form-section>
+  </ng-container>
+
+
+
+</div>
+<div>teste </div>

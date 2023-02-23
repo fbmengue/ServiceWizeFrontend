@@ -46,20 +46,24 @@ body {
 
   
 }
+.row {
+  --bs-gutter-x: 0.5rem !important;
 
-.page-container {
-  max-width: 1080px;
-  width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  margin-top: 20px
 }
 
-.sidenav-menu {
-  width: 350px;
-}
+  .page-container {
+    max-width: 1080px;
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20px
+  }
 
-.sidenav-menu div.sidenav-menu-item {
-  display: flex !important;
-  justify-content: left;
-}
+  .sidenav-menu {
+    width: 400px;
+  }
+
+  .sidenav-menu div.sidenav-menu-item {
+    display: flex !important;
+    justify-content: left;
+  }

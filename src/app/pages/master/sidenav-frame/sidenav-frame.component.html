@@ -15,10 +15,12 @@
       <ng-container *ngSwitchCase="'appointment'">
         <app-appointment-form></app-appointment-form>
       </ng-container>
+      <ng-container *ngSwitchCase="'professional'">
+        <app-professional-form></app-professional-form>
+      </ng-container>
       <ng-container *ngSwitchDefault>Code Default</ng-container>
     </ng-container>
-    <!--<app-client-form *ngIf="formTemplate === 'clientForm'"></app-client-form>
-  <app-service-form *ngIf="formTemplate === 'serviceForm'"></app-service-form>-->
+    
 
 
   </mat-sidenav>

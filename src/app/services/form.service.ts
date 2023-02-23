@@ -23,6 +23,9 @@ export class FormService {
       case 'appointment':
         this.selectedForm = 'appointment';
         break;
+      case 'professional':
+        this.selectedForm = 'professional';
+        break;
       default: this.selectedForm = 'menu';
     }
     

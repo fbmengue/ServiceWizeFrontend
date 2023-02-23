@@ -9,8 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class ServiceFormComponent {
   public form: FormGroup;
   public busy = false;
-  public nameMessage: any;
-  public emailMessage = "";
+
 
   constructor(
     private fb: FormBuilder,
@@ -21,19 +20,15 @@ export class ServiceFormComponent {
         Validators.maxLength(50),
         Validators.required,
       ])],
-      phone: ['', Validators.compose([
-        Validators.minLength(8),
-        Validators.maxLength(10),
+      duration: ['', Validators.compose([
         Validators.required,
-        Validators.pattern(/^9\d{8}$/)
+        
       ])],
-      email: ['', Validators.compose([
-        Validators.minLength(5),
-        Validators.maxLength(50),
+      price: ['', Validators.compose([
         Validators.required,
-        Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+        
       ])],
-      date: ['', Validators.compose([
+      professional: ['', Validators.compose([
         Validators.minLength(6),
         Validators.maxLength(20),
         Validators.required
@@ -41,45 +36,33 @@ export class ServiceFormComponent {
     });
   }
 
-  get errorNameMessage(): string {
+  get errorServiceMessage(): string {
     const form: FormControl = (this.form.get('name') as FormControl);
     return form.hasError('required') ?
-      'Name is required' :
+      'Service name is required' :
       form.hasError('maxlength') ?
-        'Name must have less then 50 caracters' :
+        'Service name is too long' :
         form.hasError('minlength') ?
-          'Name must be at least 5 caracters long' : '';
+          'Service name is too short' : '';
   }
 
-  get errorEmailMessage(): string {
-    const form: FormControl = (this.form.get('email') as FormControl);
+  get errorDurationMessage(): string {
+    const form: FormControl = (this.form.get('duration') as FormControl);
     return form.hasError('required') ?
-      'Email is required' :
-      form.hasError('maxlength') ?
-        'Email must have less then 50 caracters' :
-        form.hasError('pattern') ?
-          'Email is invalid: exemple@email.com' : '';
+      'Duration is required' : '';
   }
 
-  get errorPhoneMessage(): string {
-    const form: FormControl = (this.form.get('phone') as FormControl);
+  get errorPriceMessage(): string {
+    const form: FormControl = (this.form.get('price') as FormControl);
     return form.hasError('required') ?
-      'Mobile is required' :
-      form.hasError('pattern') ?
-        'Mobile is invalid' : '';
+      'Price is required' : '';
   }
 
-  get errorDateMessage(): string {
-    const form: FormControl = (this.form.get('date') as FormControl);
+  get errorProfessionalMessage(): string {
+    const form: FormControl = (this.form.get('professional') as FormControl);
     return form.hasError('required') ?
-      'Date is required' :
-      form.hasError('maxlength') ?
-        'Email must have less then 50 caracters' : '';
+      'Professional is required' : '';
   }
 
-  weekendFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    // Prevent Saturday and Sunday from being selected.
-    return day !== 0 && day !== 6;
-  };
+ 
 }

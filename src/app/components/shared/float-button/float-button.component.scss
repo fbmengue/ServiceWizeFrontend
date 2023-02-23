@@ -1,13 +1,13 @@
 .explore-button {
   position: fixed;
   width: 120px;
-  right: 5px;
+  right: 0.5rem;
   bottom: 8px;
 }
 
 .action-button {
   position: fixed;
-  right: 2rem;
+  right: 1rem;
   transition-property: opacity;
 }
 
@@ -77,11 +77,33 @@
   }
 }
 
+@keyframes moveFour {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 15.5rem;
+  }
+}
+
+@keyframes moveFourLabel {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 16rem;
+  }
+}
+
 
 
 .label {
   position: fixed;
-  right: 5rem;
+  right: 4rem;
   left: auto;
   height: 25px;
   width: 100px;
@@ -94,23 +116,43 @@
 }
 
 .one {
-  bottom: 6rem;
+  bottom: 5rem;
   animation: moveOne 0.2s;
 }
 
 .labelone {
-  bottom: 6.5rem;
+  bottom: 5.5rem;
   animation: moveOneLabel 0.2s;
 }
 
 .two {
-  bottom: 9.5rem;
+  bottom: 8.5rem;
   animation: moveTwo 0.25s;
 }
 
 .labeltwo {
-  bottom: 10rem;
+  bottom: 9rem;
   animation: moveTwoLabel 0.25s;
+}
+
+.three {
+  bottom: 12rem;
+  animation: moveThree 0.25s;
+}
+
+.labelthree {
+  bottom: 12.5rem;
+  animation: moveThreeLabel 0.25s;
+}
+
+.four {
+  bottom: 15.5rem;
+  animation: moveFour 0.25s;
+}
+
+.labelfour {
+  bottom: 16rem;
+  animation: moveFourLabel 0.25s;
 }
 
 
@@ -138,6 +180,7 @@
   }
 
   .one {
+      
     bottom: 5rem;
     animation: moveOne 0.2s;
   }
@@ -165,5 +208,14 @@
   .labelthree {
     bottom: 12.5rem;
     animation: moveThreeLabel 0.25s;
+  }
+  .four {
+    bottom: 15.5rem;
+    animation: moveFour 0.25s;
+  }
+
+  .labelfour {
+    bottom: 16rem;
+    animation: moveFourLabel 0.25s;
   }
 }

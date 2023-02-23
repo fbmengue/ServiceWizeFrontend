@@ -35,6 +35,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceFormComponent } from './components/forms/service-form/service-form.component';
 import { FormService } from './services/form.service';
 import { AppointmentFormComponent } from './components/forms/appointment-form/appointment-form.component';
+import { ProfessionalFormComponent } from './components/forms/professional-form/professional-form.component';
+import { ClientFormSectionComponent } from './components/forms/appointment-form/client-form-section/client-form-section.component';
+import { ProfessionalFormSectionComponent } from './components/forms/appointment-form/professional-form-section/professional-form-section.component';
+import { DatetimeFormSectionComponent } from './components/forms/appointment-form/datetime-form-section/datetime-form-section.component';
 
 
 
@@ -51,7 +55,11 @@ import { AppointmentFormComponent } from './components/forms/appointment-form/ap
     FloatButtonComponent,
     ClientFormComponent,
     ServiceFormComponent,
-    AppointmentFormComponent
+    AppointmentFormComponent,
+    ProfessionalFormComponent,
+    ClientFormSectionComponent,
+    ProfessionalFormSectionComponent,
+    DatetimeFormSectionComponent
   ],
   imports: [
     BrowserModule,

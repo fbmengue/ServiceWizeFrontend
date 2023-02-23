@@ -27,7 +27,7 @@
           *ngIf="openMenu"
           color="basic"
           (click)="sidenavOpenForm('appointment')">
-    Add Appointment
+    Appointment
   </button>
 
   <button mat-mini-fab
@@ -42,7 +42,7 @@
           *ngIf="openMenu"
           color="basic"
           (click)="sidenavOpenForm('client')">
-    Add Client
+    Client
   </button>
 
   <button mat-mini-fab
@@ -57,7 +57,21 @@
           *ngIf="openMenu"
           color="basic"
           (click)="sidenavOpenForm('service')">
-    Add Service
+    Service
+  </button>
+  <button mat-mini-fab
+          class="action-button four mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="sidenavOpenForm('professional')">
+    <i class="material-icons">perm_contact_calendar</i>
+  </button>
+  <button mat-raised-button id="add-service-label"
+          class="label labelfour mat-elevation-z8"
+          *ngIf="openMenu"
+          color="basic"
+          (click)="sidenavOpenForm('professional')">
+    Professional
   </button>
 
 </div>

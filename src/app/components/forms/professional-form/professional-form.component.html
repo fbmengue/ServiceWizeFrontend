@@ -1,6 +1,6 @@
 <div class="form-container">
   <div class="form-header">
-    <h5>Add New Service</h5>
+    <h5>Add New Client</h5>
     <button mat-icon-button class="form-close-x">
       <mat-icon>close</mat-icon>
     </button>
@@ -8,25 +8,12 @@
   <form [formGroup]="form" *ngIf="!busy" class="row">
     <div class="col-12 mb-2">
       <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Service Name</mat-label>
-        <input matInput formControlName="name" type="text" placeholder="Service" required>
-        <mat-error> {{ errorServiceMessage }}</mat-error>
+        <mat-label>Professional Name</mat-label>
+        <input matInput formControlName="name" type="text" placeholder="Full Name" required>
+        <mat-error> {{ errorNameMessage }}</mat-error>
       </mat-form-field>
     </div>
-    <div class="col-6 mb-2">
-      <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Duration</mat-label>
-        <input matInput formControlName="duration" type="time" placeholder="00:00" required>
-        <mat-error> {{ errorDurationMessage }}</mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-6 mb-2">
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label>Price</mat-label>
-        <input matInput type="number" formControlName="price">
-        <mat-error> {{ errorPriceMessage }}</mat-error>
-      </mat-form-field>
-    </div>
+
 
     <div class="col-12 mb-2">
       <mat-form-field appearance="fill" class="form-field">
@@ -39,6 +26,5 @@
         <mat-error> {{ errorProfessionalMessage }}</mat-error>
       </mat-form-field>
     </div>
-
   </form>
 </div>

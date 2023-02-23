@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormService } from '../../../services/form.service';
 import { SideNavService } from '../../../services/sidenav.service';
 
 @Component({
@@ -10,11 +11,13 @@ export class NavbarComponent {
 
   title: string = "ServiceWize";
 
-  constructor(private sideNavService: SideNavService) {
+  constructor(private sideNavService: SideNavService, private menuService: FormService) {
 
   }
 
-  clickMenu() {
+  sidenavOpenMenu(form: string) {
+    this.menuService.toggleForm(form);
     this.sideNavService.toggle();
+
   }
 } 

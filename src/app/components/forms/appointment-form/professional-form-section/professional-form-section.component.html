@@ -1,0 +1,35 @@
+
+
+<form [formGroup]="form" class="row">
+  <div class="col-12 mb-2">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Professional</mat-label>
+      <input matInput formControlName="professional" type="text" placeholder="Professional Name" required>
+      <mat-error> </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <div class="col-12 mb-2">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Service Name</mat-label>
+      <input matInput formControlName="service" type="text" placeholder="Service" required>
+     <!-- <mat-error> {{ errorServiceMessage }}</mat-error>-->
+    </mat-form-field>
+  </div>
+  <div class="col-6 mb-2">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Duration</mat-label>
+      <input matInput formControlName="duration" type="time" placeholder="00:00" required>
+     <!-- <mat-error> {{ errorDurationMessage }}</mat-error>-->
+    </mat-form-field>
+  </div>
+  <div class="col-6 mb-2">
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput type="number" formControlName="price">
+      <!--<mat-error> {{ errorPriceMessage }}</mat-error>-->
+    </mat-form-field>
+  </div>
+</form>
+
